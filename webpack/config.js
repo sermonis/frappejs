@@ -117,7 +117,7 @@ function makeConfig() {
             : false
         }),
         new CaseSensitivePathsWebpackPlugin(),
-        new webpack.NamedModulesPlugin(),
+        // new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.ProgressPlugin(),
         isProduction
