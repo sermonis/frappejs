@@ -7,8 +7,8 @@
     "frappe": "cli.js"
   },
   "scripts": {
-    "test": "NODE_ENV=test mocha --timeout 3000 tests --exit",
-    "test-watch": "NODE_ENV=test mocha --timeout 3000 tests --watch --reporter=min"
+    "test": "cross-env NODE_ENV=test mocha --timeout 3000 tests --exit",
+    "test-watch": "cross-env NODE_ENV=test mocha --timeout 3000 tests --watch --reporter=min"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",
