@@ -21,7 +21,7 @@ module.exports = {
 
     // to be called after db initialization
     const values =
-      (await frappe.db?.getSingleValues(
+      (await this.db?.getSingleValues(
         {
           fieldname: 'internalPrecision',
           parent: 'SystemSettings',
@@ -91,10 +91,16 @@ module.exports = {
     common.initLibs(this);
   },
 
-  registerModels(models) {
+	registerModels(models) {
+	  
+		// console.log('registerModels', models);
+		
     // register models from app/models/index.js
     for (let doctype in models) {
-      let metaDefinition = models[doctype];
+		let metaDefinition = models[doctype];
+		
+		// console.log( 'registerModels', 'doctype', doctype );
+
       if (!metaDefinition.name) {
         throw new Error(`Name is mandatory for ${doctype}`);
       }
@@ -269,7 +275,7 @@ module.exports = {
   getNewDoc(doctype) {
     let doc = this.newDoc({ doctype: doctype });
     doc._notInserted = true;
-    doc.name = frappe.getRandomString();
+    doc.name = this.getRandomString();
     this.addToCache(doc);
     return doc;
   },
