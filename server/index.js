@@ -68,8 +68,8 @@ module.exports = {
         frappe.config.port = frappe.conf.dev.devServerPort;
         // frappe.config.port = 8888;
         
-		console.log( 'frappe.config.port', frappe.config.port );
-		console.log( 'frappe.conf.dev.devServerPort', frappe.conf.dev.devServerPort );
+		// console.log( 'frappe.config.port', frappe.config.port );
+		// console.log( 'frappe.conf.dev.devServerPort', frappe.conf.dev.devServerPort );
 
         // listen
         server.listen(frappe.config.port, () => {

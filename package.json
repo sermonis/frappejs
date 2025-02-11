@@ -1,6 +1,6 @@
 {
   "name": "frappejs",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Frappe.js",
   "main": "index.js",
   "bin": {
