@@ -1,5 +1,9 @@
 #!/usr/bin/env node
 
+// https://cheatcode.co/blog/how-to-build-a-command-line-interface-cli-using-node-js
+// https://sergiodxa.com/tutorials/use-package-json-bin-to-create-a-cli
+// https://dev.to/nausaf/creating-an-npm-package-that-runs-on-command-line-with-npx-9a0
+
 const program = require('commander');
 const process = require('process');
 const package = require('./package.json');
