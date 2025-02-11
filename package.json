@@ -50,7 +50,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frappe/frappejs.git"
+    "url": "git+https://github.com/sermonis/frappejs.git"
   },
   "parserOptions": {
     "ecmaVersion": 2017
@@ -58,9 +58,9 @@
   "author": "Frappe",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/frappe/frappejs/issues"
+    "url": "https://github.com/sermonis/frappejs/issues"
   },
-  "homepage": "https://github.com/frappe/frappejs#readme",
+  "homepage": "https://github.com/sermonis/frappejs#readme",
   "devDependencies": {
     "electron-download": "^4.1.1",
     "mocha": "^5.2.0"
