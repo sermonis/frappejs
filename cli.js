@@ -6,7 +6,7 @@ const package = require('./package.json');
 const boilerplate = require('frappejs/model/boilerplate');
 // const boilerplate = require('./model/boilerplate');
 
-console.log( 'frappejs', 'cli' );
+// console.log( 'frappejs', 'cli' );
 
 // program
 //     .command('new-app <name>')
