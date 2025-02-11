@@ -2,7 +2,6 @@
   "name": "frappejs",
   "version": "0.0.10",
   "description": "Frappe.js",
-  "type": "module",
   "main": "index.js",
   "bin": {
     "frappe": "cli.js"
