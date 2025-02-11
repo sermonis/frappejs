@@ -1,4 +1,5 @@
-import { ValueError } from '../common/errors';
+// import { ValueError } from '../common/errors';
+const { ValueError } = require( '../common/errors' );
 
 function stringReplace(str, args) {
   if (!Array.isArray(args)) {
