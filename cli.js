@@ -3,7 +3,8 @@
 const program = require('commander');
 const process = require('process');
 const package = require('./package.json');
-const boilerplate = require('frappejs/model/boilerplate');
+// const boilerplate = require('frappejs/model/boilerplate');
+const boilerplate = require('./model/boilerplate');
 
 program
     .version(package.version)
