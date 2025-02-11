@@ -1,7 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
-const defaultsDeep = require('lodash/defaultsDeep');
+// const defaultsDeep = require('lodash/defaultsDeep');
+const merge = require('lodash/merge');
 const logger = require('./logger');
 
 const frappeConf = 'frappe.conf.js';
@@ -30,7 +31,8 @@ function getAppConfig() {
     }
   }
   const appConfig = require(path.resolve(getAppDir(), frappeConf));
-  return defaultsDeep(defaults, appConfig);
+//   return defaultsDeep(defaults, appConfig);
+  return merge(defaults, appConfig);
 }
 
 function resolveAppDir(...args) {

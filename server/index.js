@@ -6,7 +6,10 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 const server = require('http').Server(app);
-const io = new require('socket.io').Server(server);
+// const io = new require('socket.io').Server(server);
+const { Server } = require( 'socket.io' );
+const io = new Server( server );
+
 const frappe = require('frappejs');
 const restAPI = require('./restAPI');
 const frappeModels = require('frappejs/models');
@@ -19,6 +22,8 @@ const { addWebpackMiddleware } = require('../webpack/serve');
 const { getAppConfig, resolveAppDir } = require('../webpack/utils');
 
 frappe.conf = getAppConfig();
+
+// console.log('conf', frappe.conf);
 
 require.extensions['.html'] = function (module, filename) {
     module.exports = fs.readFileSync(filename, 'utf8');
@@ -61,6 +66,10 @@ module.exports = {
         }
 
         frappe.config.port = frappe.conf.dev.devServerPort;
+        // frappe.config.port = 8888;
+        
+		console.log( 'frappe.config.port', frappe.config.port );
+		console.log( 'frappe.conf.dev.devServerPort', frappe.conf.dev.devServerPort );
 
         // listen
         server.listen(frappe.config.port, () => {

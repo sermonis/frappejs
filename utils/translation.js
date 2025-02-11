@@ -1,4 +1,3 @@
-// import { ValueError } from '../common/errors';
 const { ValueError } = require( '../common/errors' );
 
 function stringReplace(str, args) {
@@ -72,10 +71,10 @@ class TranslationString {
   }
 }
 
-export function T(...args) {
+module.exports.T = function (...args) {
   return new TranslationString(...args);
 }
 
-export function t(...args) {
+module.exports.t = function (...args) {
   return new TranslationString(...args).s;
 }
